@@ -6,7 +6,7 @@
 import { Outlet } from 'react-router-dom';
 import { Navigation } from '@/components/ui/Navigation';
 import { ErrorBoundary } from '@/components/layout/ErrorBoundary';
-import { NetworkStatus } from '@/components/NetworkStatus';
+// import { NetworkStatus } from '@/components/NetworkStatus';
 
 /**
  * Main layout component wrapping all pages
@@ -22,9 +22,6 @@ export function MainLayout() {
       >
         Skip to main content
       </a>
-
-      {/* Network Status Indicator */}
-      <NetworkStatus />
 
       {/* Main Navigation */}
       <Navigation />

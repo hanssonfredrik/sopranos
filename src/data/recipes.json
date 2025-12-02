@@ -1,78 +1,73 @@
 {
   "recipes": [
     {
-      "name": "Tony's Gabagool Sandwich",
-      "description": "A classic Italian-American sandwich featuring capicola (gabagool), provolone, and roasted peppers on crusty Italian bread. This is Tony's go-to lunch at Satriale's Pork Store.",
+      "name": "Italian Meatballs with Tomato Sauce",
+      "description": "Traditional Italian meatballs cooked in rich tomato sauce. A staple at the Soprano family table, these tender meatballs are simmered in homemade sauce for authentic Italian flavor.",
       "ingredients": [
-        "1 Italian sub roll or ciabatta bread",
-        "4-6 slices of capicola (gabagool)",
-        "3-4 slices of provolone cheese",
-        "Roasted red peppers",
-        "Lettuce",
-        "Sliced tomatoes",
-        "Olive oil",
-        "Red wine vinegar",
-        "Dried oregano"
+        "500g ground beef",
+        "1.25 dl breadcrumbs",
+        "2 large eggs",
+        "1 tsp finely minced garlic",
+        "1.25 dl freshly grated Parmesan cheese",
+        "2 tbsp finely chopped parsley",
+        "1 tsp salt",
+        "Black pepper to taste",
+        "2 tbsp olive oil"
       ],
       "instructions": [
-        "Slice the bread lengthwise and drizzle with olive oil and a splash of red wine vinegar.",
-        "Layer the capicola on the bottom half of the bread.",
-        "Add the provolone cheese slices on top of the meat.",
-        "Add roasted red peppers, lettuce, and tomato slices.",
-        "Sprinkle with dried oregano to taste.",
-        "Close the sandwich and press down gently to compress the layers.",
-        "Serve immediately or wrap tightly for later."
+        "Make the tomato sauce according to the tomato sauce recipe.",
+        "Place all ingredients except oil in a large bowl. Mix well.",
+        "Rinse your hands in cold water and form meatballs no larger than small grapes.",
+        "Heat oil in a frying pan. Brown the meatballs well all around. (They will finish cooking in the tomato sauce later.)",
+        "When the tomato sauce has simmered for one and a half hours, add the meatballs and let them simmer for another half hour.",
+        "Serve with pasta."
       ]
     },
     {
-      "name": "Carmela's Ziti",
-      "description": "Carmela's famous baked ziti is a staple at Soprano family gatherings. This rich, cheesy pasta dish is comfort food at its finest.",
+      "name": "Tomato Sauce",
+      "description": "The foundation of Italian cooking - a rich, slow-simmered tomato sauce that's been passed down through generations of Italian families. Perfect for pasta, meatballs, and baked dishes.",
       "ingredients": [
-        "1 pound ziti pasta",
-        "2 pounds ricotta cheese",
-        "1 pound mozzarella, shredded",
-        "1 cup grated Parmesan cheese",
-        "2 eggs",
-        "4 cups marinara sauce",
-        "Fresh basil leaves",
-        "Salt and pepper to taste",
-        "2 tablespoons olive oil",
-        "2 cloves garlic, minced"
+        "2 tbsp olive oil",
+        "4 garlic cloves",
+        "4 tbsp tomato paste",
+        "8 cans whole peeled tomatoes",
+        "Salt and freshly ground black pepper (about 1 tsp salt and 1 tsp pepper)",
+        "10 fresh basil leaves, torn into strips",
+        "2 tbsp sugar",
+        "1-2 dl red wine (approximately)"
       ],
       "instructions": [
-        "Preheat oven to 375°F (190°C).",
-        "Cook ziti according to package directions until al dente. Drain and set aside.",
-        "In a large bowl, combine ricotta, eggs, half the mozzarella, half the Parmesan, salt, and pepper.",
-        "In a separate pan, heat olive oil and sauté garlic until fragrant. Add marinara sauce and simmer for 10 minutes.",
-        "Mix the cooked ziti with the ricotta mixture and half the marinara sauce.",
-        "Spread half the ziti mixture in a greased 9x13 baking dish.",
-        "Pour remaining marinara sauce over the top, then sprinkle with remaining mozzarella and Parmesan.",
-        "Cover with foil and bake for 30 minutes. Remove foil and bake an additional 15 minutes until cheese is golden and bubbly.",
-        "Let stand 10 minutes before serving. Garnish with fresh basil."
+        "Heat oil over medium heat in a large thick-bottomed pot.",
+        "Add garlic and fry until golden. Stir in tomato paste and cook for one minute.",
+        "Process tomatoes smooth in a food processor and add to the pot.",
+        "Add red wine, basil, salt and pepper to taste.",
+        "Bring sauce to a boil, then let it simmer on low heat for 2 hours. Stir occasionally. Add water or more wine if the sauce becomes too thick."
       ]
     },
     {
-      "name": "Paulie's Peppers and Eggs",
-      "description": "A simple Italian dish that Paulie Walnuts swears by. Bell peppers and scrambled eggs make a surprisingly satisfying meal that's perfect for breakfast, lunch, or dinner.",
+      "name": "Ziti al Forno (Carmela's Baked Ziti)",
+      "description": "Carmela's famous baked ziti with meatballs - the ultimate Italian-American comfort food. This rich, layered pasta dish is a showstopper at family gatherings and Sunday dinners. Requires about 2 hours preparation plus over 1 hour baking time.",
       "ingredients": [
-        "4 large bell peppers (red, green, or mixed)",
-        "6 large eggs",
-        "1/4 cup olive oil",
-        "2 cloves garlic, sliced",
-        "Salt and pepper to taste",
-        "Grated Pecorino Romano cheese",
-        "Italian bread for serving",
-        "Fresh parsley, chopped"
+        "500g ziti or penne pasta",
+        "Salt",
+        "1.5 liters tomato sauce",
+        "Italian meatballs (small size)",
+        "2.5 dl freshly grated Parmesan cheese",
+        "2.5 dl ricotta cheese",
+        "225g fresh mozzarella cheese"
       ],
       "instructions": [
-        "Slice peppers into strips, removing seeds and membranes.",
-        "Heat olive oil in a large skillet over medium heat.",
-        "Add sliced garlic and cook until fragrant, about 1 minute.",
-        "Add pepper strips, season with salt and pepper, and cook until soft and slightly caramelized, about 15-20 minutes.",
-        "Beat eggs in a bowl with a pinch of salt.",
-        "Pour eggs over the peppers in the skillet.",
-        "Scramble the eggs with the peppers until cooked to your liking.",
-        "Sprinkle with Pecorino Romano and fresh parsley. Serve with crusty Italian bread."
+        "Make the tomato sauce according to the tomato sauce recipe.",
+        "Make the meatballs according to the meatball recipe. However, after the sauce has cooked for 1.5 hours, remove 7.5 dl of tomato sauce and pour into another pot. Add the meatballs to this pot and cook for another half hour.",
+        "Boil at least 4 liters of water in a large pot. Add pasta and salt to taste. Cook pasta al dente, so it still has some bite. Stir occasionally.",
+        "Preheat oven to 175°C (350°F).",
+        "Drain pasta water and place pasta in the pot with the meatballs from step 2. Mix in half of the Parmesan cheese. Now the pasta, meatballs, some tomato sauce and half the Parmesan are in one pot.",
+        "Place half of the pasta with meatballs in a large (3-4 liter) ovenproof dish.",
+        "Sprinkle all the ricotta, mozzarella and half of the remaining Parmesan over it. Pour on 2.5 dl sauce.",
+        "Add the rest of the pasta and another 2.5 dl sauce. Sprinkle with the rest of the Parmesan.",
+        "Cover the dish with foil. (The dish can be prepared to this point and stored in the refrigerator for several hours or overnight. Remove about 30 minutes before cooking.)",
+        "Bake for 45 minutes.",
+        "Remove foil and bake for another 15-30 minutes, or until sauce bubbles along the edges. Cover and let stand for 15 minutes before serving."
       ]
     }
   ]
