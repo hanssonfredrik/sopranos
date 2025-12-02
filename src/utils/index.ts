@@ -2,6 +2,12 @@
  * Utility functions demonstrating TypeScript best practices
  */
 
+// Re-export data loader utilities
+export { isSeasonArray, isRecipeArray, isTopListArray } from './dataLoader';
+
+// Re-export formatter utilities
+export { formatAirDate, toSlug, formatDuration } from './formatters';
+
 // Type guard for checking if value is not null/undefined
 export const isDefined = <T>(value: T | null | undefined): value is T => {
   return value !== null && value !== undefined;

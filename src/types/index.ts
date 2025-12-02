@@ -1,34 +1,21 @@
-// Common types used throughout the application
+/**
+ * Central type exports for the Sopranos PWA
+ * Re-exports all type definitions from domain-specific modules
+ */
 
-export interface User {
-  id: string;
-  name: string;
-  email: string;
-  avatar?: string;
-  createdAt: Date;
-  updatedAt: Date;
-}
+// Common types
+export type { DataLoadingState, NavigationItem } from './common.types';
 
-export interface ApiResponse<T> {
-  data: T;
-  status: number;
-  message: string;
-  errors?: string[];
-}
+// Season & Episode types
+export type { Season, Episode, MusicTrack } from './season.types';
 
-export type LoadingState = 'idle' | 'loading' | 'success' | 'error';
+// Recipe types
+export type { Recipe } from './recipe.types';
 
-export interface PaginationParams {
-  page: number;
-  limit: number;
-  total?: number;
-}
+// Top List types
+export type { TopList, TopListItem } from './toplist.types';
 
-export interface ButtonVariant {
-  variant: 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
-  size: 'sm' | 'md' | 'lg';
-}
-
+// Legacy types (to be migrated)
 export interface NetworkStatus {
   isOnline: boolean;
   effectiveType?: '2g' | '3g' | '4g' | 'slow-2g';

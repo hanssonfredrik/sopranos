@@ -1,12 +1,10 @@
-import React from 'react';
+/**
+ * Main App component for The Sopranos PWA
+ */
+
 import { AppRouter } from '@/components/AppRouter';
 import './App.css';
 
-/**
- * Main App component for The Sopranos website
- */
-const App: React.FC = () => {
+export default function App() {
   return <AppRouter />;
-};
-
-export default App;
+}

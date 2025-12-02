@@ -1,32 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import 'tailwindcss';
+@import './styles/variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap');
+
+@theme {
+  /* Colors */
+  --color-background: #1a1a2e;
+  --color-surface: #2d2d44;
+  --color-accent: #e94560;
+  --color-primary: #e94560;
+  --color-primary-light: #ff5577;
+  --color-text: #f5f5f5;
+  --color-secondary: #a0a0a0;
+  --color-border: #3d3d5c;
+  
+  /* Fonts */
+  --font-family-sans: Inter, system-ui, sans-serif;
+  --font-family-display: Playfair Display, serif;
+}
+
+/* ==========================================================================
+   Base Styles - Modern Sopranos Redesign
+   ========================================================================== */
 
 :root {
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--font-family-primary);
   line-height: 1.5;
   font-weight: 400;
 
-  /* Sopranos Dark Theme - HBO Max inspired */
-  --bg-primary: #000000;
-  --bg-secondary: #111111;
-  --bg-tertiary: #1a1a1a;
-  --bg-card: #222222;
-  --bg-hover: #2a2a2a;
+  /* Legacy theme variables (for gradual migration) */
+  --bg-primary: var(--color-secondary);
+  --bg-secondary: var(--color-secondary-light);
+  --bg-tertiary: #1e1e1e;
+  --bg-card: var(--color-surface);
+  --bg-hover: #252525;
   
-  --text-primary: #ffffff;
-  --text-secondary: #cccccc;
-  --text-muted: #888888;
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --text-muted: #7a7a7a;
   
-  --accent-primary: #9d4edd;
-  --accent-secondary: #c77dff;
-  --accent-gold: #ffd60a;
+  --accent-primary: var(--color-primary);
+  --accent-secondary: var(--color-primary-light);
+  --accent-gold: var(--color-accent);
+  --accent-gold-light: #D4B77A;
   
-  --border-color: #333333;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7);
+  --border-color: var(--color-border);
+  --border-hover: #3a3a3a;
+  --shadow: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
 
-  color-scheme: dark;
-  color: var(--text-primary);
-  background-color: var(--bg-primary);
+  color-scheme: light;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -42,8 +67,8 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
 }
 
 #root {
@@ -62,63 +87,64 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--text-primary);
+  color: var(--color-text-primary);
   margin: 0;
+  font-family: var(--font-family-heading);
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: var(--font-size-4xl);
   line-height: 1.1;
-  font-weight: 800;
-}
-
-h2 {
-  font-size: 2.4em;
   font-weight: 700;
 }
 
+h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+}
+
 h3 {
-  font-size: 1.8em;
+  font-size: var(--font-size-2xl);
   font-weight: 600;
 }
 
 p {
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   line-height: 1.6;
   margin: 0;
 }
 
 button {
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-base);
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--bg-card);
-  color: var(--text-primary);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
   cursor: pointer;
-  transition: all 0.25s;
+  transition: var(--transition-base);
 }
 
 button:hover {
-  background-color: var(--bg-hover);
-  border-color: var(--accent-primary);
+  background-color: var(--color-secondary-light);
+  border-color: var(--color-primary);
 }
 
 button:focus,
 button:focus-visible {
-  outline: 2px solid var(--accent-primary);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
 .btn-primary {
-  background-color: var(--accent-primary);
+  background-color: var(--color-primary);
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-secondary);
+  background-color: var(--color-primary-light);
 }
 
 .container {
@@ -204,17 +230,166 @@ button:focus-visible {
   .md\\:flex { display: flex; }
   .md\\:hidden { display: none; }
   .md\\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .md\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* Effects */
 .shadow { box-shadow: var(--shadow); }
 .shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
 .backdrop-blur { backdrop-filter: blur(8px); }
 
 /* Transitions */
 .transition-colors { transition-property: color; transition-duration: 0.25s; }
+.transition-all { transition-property: all; transition-duration: 0.3s; }
 
 /* Hover states */
 .hover\\:text-primary:hover { color: var(--text-primary); }
 .hover\\:text-secondary:hover { color: var(--text-secondary); }
 .hover\\:text-accent-secondary:hover { color: var(--accent-secondary); }
+.hover\\:text-accent-gold:hover { color: var(--accent-gold); }
+.hover\\:bg-hover:hover { background-color: var(--bg-hover); }
+.hover\\:border-accent:hover { border-color: var(--accent-primary); }
+.hover\\:transform:hover { transform: translateY(-4px); }
+
+/* Custom Components */
+.display-font {
+  font-family: var(--font-family-heading);
+}
+
+.sidebar {
+  width: 280px;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+  position: sticky;
+  top: 4rem;
+}
+
+.main-content {
+  flex: 1;
+  min-height: calc(100vh - 4rem);
+  padding: 2rem;
+}
+
+.glass-card {
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.hero-section {
+  background: linear-gradient(180deg, rgba(139, 0, 0, 0.2) 0%, rgba(10, 10, 10, 0) 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-link {
+  display: block;
+  padding: 0.875rem 1.25rem;
+  color: var(--text-secondary);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  transform: translateX(4px);
+}
+
+.nav-link.active {
+  background: linear-gradient(90deg, var(--accent-primary) 0%, rgba(139, 0, 0, 0.3) 100%);
+  color: var(--text-primary);
+  border-left: 3px solid var(--accent-gold);
+}
+
+.episode-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.episode-card:hover {
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--accent-primary);
+  color: white;
+}
+
+.badge-gold {
+  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-light) 100%);
+  color: var(--bg-primary);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Grid Layouts */
+.grid-auto-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid-episodes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  
+  .grid-auto-fit,
+  .grid-episodes {
+    grid-template-columns: 1fr;
+  }
+}

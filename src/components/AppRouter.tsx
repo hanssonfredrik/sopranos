@@ -1,36 +1,83 @@
-import React from 'react';
+/**
+ * App Router Component
+ * Main application routing with lazy loading and error handling
+ */
+
+import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Layout } from '@/components/Layout';
+import { MainLayout } from '@/components/layout/MainLayout';
+import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
 import { HomePage } from '@/pages/HomePage';
-import { SeasonsPage } from '@/pages/SeasonsPage';
-import { SeasonDetailPage } from '@/pages/SeasonDetailPage';
-import { EpisodeDetailPage } from '@/pages/EpisodeDetailPage';
-import { RecipesPage } from '@/pages/RecipesPage';
-import { TopListPage } from '@/pages/TopListPage';
+import { NotFoundPage } from '@/pages/NotFoundPage';
+
+// Lazy load route components for code splitting
+const SeasonsPage = lazy(() => import('@/pages/SeasonsPage').then(m => ({ default: m.SeasonsPage })));
+const SeasonDetailPage = lazy(() => import('@/pages/SeasonDetailPage').then(m => ({ default: m.SeasonDetailPage })));
+const EpisodeDetailPage = lazy(() => import('@/pages/EpisodeDetailPage').then(m => ({ default: m.EpisodeDetailPage })));
+const RecipesPage = lazy(() => import('@/pages/RecipesPage').then(m => ({ default: m.RecipesPage })));
+const TopListPage = lazy(() => import('@/pages/TopListPage').then(m => ({ default: m.TopListPage })));
 
 /**
- * Main App Router with all Sopranos routes
+ * Main application router with lazy loading and 404 handling
  */
-export const AppRouter: React.FC = () => {
+export function AppRouter() {
   return (
     <Router>
-      <Layout>
-        <Routes>
-          {/* Main page */}
-          <Route path="/" element={<HomePage />} />
+      <Routes>
+        <Route element={<MainLayout />}>
+          {/* Home - no lazy loading for immediate display */}
+          <Route index element={<HomePage />} />
           
-          {/* Seasons routes */}
-          <Route path="/seasons" element={<SeasonsPage />} />
-          <Route path="/seasons/:seasonNumber" element={<SeasonDetailPage />} />
-          <Route path="/seasons/:seasonNumber/:episodeNumber" element={<EpisodeDetailPage />} />
+          {/* Seasons routes - lazy loaded */}
+          <Route
+            path="/seasons"
+            element={
+              <Suspense fallback={<LoadingSpinner centered label="Loading seasons..." />}>
+                <SeasonsPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/seasons/:seasonNumber"
+            element={
+              <Suspense fallback={<LoadingSpinner centered label="Loading season..." />}>
+                <SeasonDetailPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/seasons/:seasonNumber/:episodeNumber"
+            element={
+              <Suspense fallback={<LoadingSpinner centered label="Loading episode..." />}>
+                <EpisodeDetailPage />
+              </Suspense>
+            }
+          />
           
-          {/* Recipes page */}
-          <Route path="/recipes" element={<RecipesPage />} />
+          {/* Recipes page - lazy loaded */}
+          <Route
+            path="/recipes/:recipeSlug?"
+            element={
+              <Suspense fallback={<LoadingSpinner centered label="Loading recipes..." />}>
+                <RecipesPage />
+              </Suspense>
+            }
+          />
           
-          {/* Top list page */}
-          <Route path="/toplist" element={<TopListPage />} />
-        </Routes>
-      </Layout>
+          {/* Top list page - lazy loaded */}
+          <Route
+            path="/toplist"
+            element={
+              <Suspense fallback={<LoadingSpinner centered label="Loading top lists..." />}>
+                <TopListPage />
+              </Suspense>
+            }
+          />
+          
+          {/* 404 - catch all unmatched routes */}
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
     </Router>
   );
-};
+}

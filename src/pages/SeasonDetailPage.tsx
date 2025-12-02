@@ -1,96 +1,69 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { seasons } from '@/data/sopranos';
+/**
+ * Season Detail Page Component
+ * Displays all episodes for a specific season with season navigation sidebar
+ */
+
+import { useParams } from 'react-router-dom';
+import { useSeasons } from '@/hooks/useSeasons';
+import { PageWithSidebar } from '@/components/layout/PageWithSidebar';
+import { SeasonList } from '@/components/seasons/SeasonList';
+import { SeasonEpisodeList } from '@/components/seasons/SeasonEpisodeList';
+import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
+import { ErrorMessage } from '@/components/ui/ErrorMessage';
 
 /**
- * Season detail page showing all episodes in a season
+ * Season detail page showing episode list for a specific season
+ * with sidebar navigation to other seasons
  */
-export const SeasonDetailPage: React.FC = () => {
+export function SeasonDetailPage() {
   const { seasonNumber } = useParams<{ seasonNumber: string }>();
-  const seasonNum = parseInt(seasonNumber || '1');
-  const season = seasons.find(s => s.number === seasonNum);
-  
-  if (!season) {
+  const { data: seasons, loading, error } = useSeasons();
+
+  // Loading state
+  if (loading) {
+    return <LoadingSpinner centered label="Loading season..." />;
+  }
+
+  // Error state
+  if (error) {
+    return <ErrorMessage message={error} centered />;
+  }
+
+  // No data
+  if (!seasons || seasons.length === 0) {
+    return <ErrorMessage message="No seasons data available" centered />;
+  }
+
+  // Parse season number
+  const currentSeasonNum = parseInt(seasonNumber || '1', 10);
+  const currentSeason = seasons.find(s => s.seasonNumber === currentSeasonNum);
+
+  // Season not found
+  if (!currentSeason) {
     return (
-      <div className="bg-primary py-16">
-        <div className="container mx-auto text-center">
-          <div className="text-red-400">Season {seasonNumber} not found</div>
-          <Link to="/seasons" className="text-accent-secondary hover:text-accent-primary mt-4 inline-block">
-            ← Back to Seasons
-          </Link>
-        </div>
+      <div className="text-center py-16">
+        <ErrorMessage
+          message={`Season ${seasonNumber} not found`}
+          centered
+        />
       </div>
     );
   }
-  
-  return (
-    <div className="bg-primary py-16">
-      <div className="container mx-auto">
-        <div className="flex items-center mb-8">
-          <Link to="/seasons" className="text-accent-secondary hover:text-accent-primary mr-4">
-            ← Back to Seasons
-          </Link>
-        </div>
-        
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-primary mb-4">
-            Season {season.number}
-          </h1>
-          <p className="text-secondary text-lg max-w-3xl mb-4">
-            Explore all episodes from Season {season.number} ({season.year}) with complete episode information, HBO reviews, and music tracks.
-          </p>
-          <div className="text-muted">
-            {season.episodes} episodes total • {season.episodeList.length} episodes with full details
-          </div>
-        </div>
-        
-        {season.episodeList.length > 0 ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {season.episodeList.map((episode) => (
-              <Link
-                key={`${episode.seasonNumber}-${episode.episodeNumber}`}
-                to={`/seasons/${seasonNumber}/${episode.episodeNumber}`}
-                className="bg-card hover:bg-hover p-6 rounded shadow transition-colors group"
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <div className="text-accent-gold font-bold">
-                    Episode {episode.episodeNumber}
-                  </div>
-                  <div className="text-muted text-xs">
-                    {episode.airDate}
-                  </div>
-                </div>
-                
-                <h3 className="text-primary font-semibold mb-2 group-hover:text-accent-secondary transition-colors">
-                  {episode.title}
-                </h3>
-                
-                <p className="text-muted text-sm mb-3 line-clamp-3">
-                  {episode.description.slice(0, 120)}...
-                </p>
 
-                <div className="text-xs text-muted">
-                  <div>Directed by {episode.director}</div>
-                  <div>Music: {episode.music[0]}</div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        ) : (
-          <div className="bg-card p-8 rounded shadow text-center">
-            <div className="text-6xl mb-4">📺</div>
-            <h3 className="text-xl font-bold text-accent-gold mb-4">
-              Episodes Coming Soon
-            </h3>
-            <p className="text-secondary mb-4">
-              Detailed episode information for Season {season.number} will be added from the XML data.
-            </p>
-            <p className="text-muted text-sm">
-              This season has {season.episodes} episodes from {season.year}
-            </p>
-          </div>
-        )}
-      </div>
-    </div>
+  return (
+    <PageWithSidebar
+      sidebar={
+        <SeasonList
+          seasons={seasons}
+          activeSeason={currentSeasonNum}
+        />
+      }
+    >
+      <SeasonEpisodeList
+        seasonNumber={currentSeasonNum}
+        episodes={currentSeason.episodes}
+      />
+    </PageWithSidebar>
   );
-};
+}
+

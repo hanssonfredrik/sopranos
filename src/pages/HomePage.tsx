@@ -1,187 +1,114 @@
-import React from 'react';
+/**
+ * Home Page Component
+ * Modern welcome experience with hero section and feature overview
+ */
+
 import { Link } from 'react-router-dom';
-import { seriesInfo, awards } from '@/data/sopranos';
 
 /**
- * Home page component with series overview
+ * Home page with hero section, feature overview, and call-to-action
  */
-export const HomePage: React.FC = () => {
+export function HomePage() {
   return (
-    <div className="bg-primary">
+    <div className="space-y-16">
       {/* Hero Section */}
-      <section className="relative bg-secondary">
-        <div className="container mx-auto py-16 md:py-24">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h1 className="text-4xl md:text-6xl font-black text-accent-gold mb-6">
-                THE SOPRANOS
-              </h1>
-              <p className="text-lg text-secondary mb-8 leading-relaxed">
-                {seriesInfo.description}
-              </p>
-              <div className="flex space-x-4">
-                <Link
-                  to="/seasons"
-                  className="bg-accent-primary hover:bg-accent-secondary text-primary font-semibold px-8 py-3 rounded transition-colors"
-                >
-                  Watch Episodes
-                </Link>
-                <Link
-                  to="/toplist"
-                  className="border border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-primary font-semibold px-8 py-3 rounded transition-colors"
-                >
-                  Top Episodes
-                </Link>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-card p-8 rounded shadow-lg">
-                <h3 className="text-2xl font-bold text-accent-gold mb-4">
-                  Series Information
-                </h3>
-                <div className="space-y-3 text-left">
-                  <div className="flex justify-between">
-                    <span className="text-muted">Created by:</span>
-                    <span className="text-secondary">David Chase</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted">Years:</span>
-                    <span className="text-secondary">{seriesInfo.originalRun}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted">Seasons:</span>
-                    <span className="text-secondary">{seriesInfo.seasons}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted">Episodes:</span>
-                    <span className="text-secondary">{seriesInfo.totalEpisodes}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted">Network:</span>
-                    <span className="text-secondary">{seriesInfo.network}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <section className="text-center py-12 md:py-16">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 display-font">
+          The Sopranos
+        </h1>
+        <p className="text-lg md:text-xl text-secondary max-w-3xl mx-auto mb-8 leading-relaxed">
+          Explore the groundbreaking HBO series that redefined television drama. 
+          Dive into six seasons of compelling storytelling, memorable characters, 
+          and the world of Tony Soprano.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Link
+            to="/seasons"
+            className="btn-primary px-8 py-3 rounded-lg font-semibold transition-colors"
+          >
+            Browse Seasons
+          </Link>
+          <Link
+            to="/toplist"
+            className="px-8 py-3 rounded-lg font-semibold border border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+          >
+            Top Episodes
+          </Link>
         </div>
       </section>
 
-      {/* Genre and Cast Section */}
-      <section className="py-16">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Genres */}
-            <div>
-              <h2 className="text-3xl font-bold text-primary mb-6">
-                Genre
-              </h2>
-              <div className="flex flex-wrap gap-3">
-                {["Crime Drama", "Black Comedy", "Psychological Drama"].map((genre, index) => (
-                  <span
-                    key={index}
-                    className="bg-tertiary text-secondary px-4 py-2 rounded font-medium"
-                  >
-                    {genre}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Cast */}
-            <div>
-              <h2 className="text-3xl font-bold text-primary mb-6">
-                Main Cast
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {[
-                  "James Gandolfini",
-                  "Lorraine Bracco", 
-                  "Edie Falco",
-                  "Michael Imperioli",
-                  "Dominic Chianese",
-                  "Steven Van Zandt",
-                  "Tony Sirico",
-                  "Robert Iler"
-                ].map((actor, index) => (
-                  <div key={index} className="text-secondary">
-                    {actor}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Navigation */}
-      <section className="bg-secondary py-16">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center text-primary mb-12">
-            Explore The Sopranos Universe
+      {/* Feature Overview Cards */}
+      <section className="grid md:grid-cols-3 gap-8">
+        {/* Seasons & Episodes */}
+        <Link
+          to="/seasons"
+          className="group bg-surface rounded-lg shadow-md hover:shadow-lg p-6 transition-all hover:-translate-y-1"
+        >
+          <div className="text-4xl mb-4">📺</div>
+          <h2 className="text-xl font-semibold text-primary mb-3 group-hover:text-primary-light transition-colors">
+            Seasons & Episodes
           </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Seasons */}
-            <Link to="/seasons" className="group">
-              <div className="bg-card hover:bg-hover p-6 rounded shadow transition-colors">
-                <div className="text-accent-gold text-4xl mb-4">📺</div>
-                <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-accent-secondary transition-colors">
-                  All Seasons
-                </h3>
-                <p className="text-secondary">
-                  Dive into all 6 seasons and 86 episodes of this groundbreaking series.
-                </p>
-              </div>
-            </Link>
+          <p className="text-secondary">
+            Browse all 6 seasons and 86 episodes. Explore detailed episode information, 
+            music tracks, and memorable quotes.
+          </p>
+        </Link>
 
-            {/* Recipes */}
-            <Link to="/recipes" className="group">
-              <div className="bg-card hover:bg-hover p-6 rounded shadow transition-colors">
-                <div className="text-accent-gold text-4xl mb-4">🍝</div>
-                <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-accent-secondary transition-colors">
-                  Italian Recipes
-                </h3>
-                <p className="text-secondary">
-                  Discover authentic Italian recipes featured throughout the series.
-                </p>
-              </div>
-            </Link>
+        {/* Recipes */}
+        <Link
+          to="/recipes"
+          className="group bg-surface rounded-lg shadow-md hover:shadow-lg p-6 transition-all hover:-translate-y-1"
+        >
+          <div className="text-4xl mb-4">🍝</div>
+          <h2 className="text-xl font-semibold text-primary mb-3 group-hover:text-primary-light transition-colors">
+            Italian Recipes
+          </h2>
+          <p className="text-secondary">
+            Discover authentic Italian recipes featured in the series. 
+            From Sunday gravy to ziti, cook like the Sopranos family.
+          </p>
+        </Link>
 
-            {/* Top List */}
-            <Link to="/toplist" className="group">
-              <div className="bg-card hover:bg-hover p-6 rounded shadow transition-colors">
-                <div className="text-accent-gold text-4xl mb-4">🏆</div>
-                <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-accent-secondary transition-colors">
-                  Top Episodes
-                </h3>
-                <p className="text-secondary">
-                  The highest-rated and most memorable episodes ranked by fans.
-                </p>
-              </div>
-            </Link>
-          </div>
-        </div>
+        {/* Top Lists */}
+        <Link
+          to="/toplist"
+          className="group bg-surface rounded-lg shadow-md hover:shadow-lg p-6 transition-all hover:-translate-y-1"
+        >
+          <div className="text-4xl mb-4">🏆</div>
+          <h2 className="text-xl font-semibold text-primary mb-3 group-hover:text-primary-light transition-colors">
+            Top Lists
+          </h2>
+          <p className="text-secondary">
+            Curated rankings of the best episodes, most iconic quotes, 
+            and unforgettable moments from the series.
+          </p>
+        </Link>
       </section>
 
-      {/* Awards and Recognition */}
-      <section className="py-16">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold text-primary mb-12">
-            Awards & Recognition
-          </h2>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            {awards.map((award, index) => (
-              <div key={index} className="bg-card p-6 rounded">
-                <div className="text-accent-gold text-3xl font-bold mb-2">{award.wins}</div>
-                <div className="text-secondary">{award.name}</div>
-              </div>
-            ))}
+      {/* Series Stats */}
+      <section className="bg-surface rounded-lg shadow-md p-8">
+        <h2 className="text-2xl font-semibold text-primary mb-6 text-center">
+          Series Information
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <div className="text-3xl font-bold text-primary mb-2">6</div>
+            <div className="text-sm text-secondary">Seasons</div>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-primary mb-2">86</div>
+            <div className="text-sm text-secondary">Episodes</div>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-primary mb-2">1999-2007</div>
+            <div className="text-sm text-secondary">Original Run</div>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-primary mb-2">21</div>
+            <div className="text-sm text-secondary">Emmy Awards</div>
           </div>
         </div>
       </section>
     </div>
   );
-};
+}

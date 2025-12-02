@@ -1,9 +1,11 @@
 import React from 'react';
-import type { ButtonVariant } from '@/types';
+
+type ButtonVariant = 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
+type ButtonSize = 'sm' | 'md' | 'lg';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonVariant['variant'];
-  size?: ButtonVariant['size'];
+  variant?: ButtonVariant;
+  size?: ButtonSize;
   loading?: boolean;
   children: React.ReactNode;
 }
