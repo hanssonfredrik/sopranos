@@ -1,0 +1,79 @@
+{
+  "recipes": [
+    {
+      "name": "Tony's Gabagool Sandwich",
+      "description": "A classic Italian-American sandwich featuring capicola (gabagool), provolone, and roasted peppers on crusty Italian bread. This is Tony's go-to lunch at Satriale's Pork Store.",
+      "ingredients": [
+        "1 Italian sub roll or ciabatta bread",
+        "4-6 slices of capicola (gabagool)",
+        "3-4 slices of provolone cheese",
+        "Roasted red peppers",
+        "Lettuce",
+        "Sliced tomatoes",
+        "Olive oil",
+        "Red wine vinegar",
+        "Dried oregano"
+      ],
+      "instructions": [
+        "Slice the bread lengthwise and drizzle with olive oil and a splash of red wine vinegar.",
+        "Layer the capicola on the bottom half of the bread.",
+        "Add the provolone cheese slices on top of the meat.",
+        "Add roasted red peppers, lettuce, and tomato slices.",
+        "Sprinkle with dried oregano to taste.",
+        "Close the sandwich and press down gently to compress the layers.",
+        "Serve immediately or wrap tightly for later."
+      ]
+    },
+    {
+      "name": "Carmela's Ziti",
+      "description": "Carmela's famous baked ziti is a staple at Soprano family gatherings. This rich, cheesy pasta dish is comfort food at its finest.",
+      "ingredients": [
+        "1 pound ziti pasta",
+        "2 pounds ricotta cheese",
+        "1 pound mozzarella, shredded",
+        "1 cup grated Parmesan cheese",
+        "2 eggs",
+        "4 cups marinara sauce",
+        "Fresh basil leaves",
+        "Salt and pepper to taste",
+        "2 tablespoons olive oil",
+        "2 cloves garlic, minced"
+      ],
+      "instructions": [
+        "Preheat oven to 375°F (190°C).",
+        "Cook ziti according to package directions until al dente. Drain and set aside.",
+        "In a large bowl, combine ricotta, eggs, half the mozzarella, half the Parmesan, salt, and pepper.",
+        "In a separate pan, heat olive oil and sauté garlic until fragrant. Add marinara sauce and simmer for 10 minutes.",
+        "Mix the cooked ziti with the ricotta mixture and half the marinara sauce.",
+        "Spread half the ziti mixture in a greased 9x13 baking dish.",
+        "Pour remaining marinara sauce over the top, then sprinkle with remaining mozzarella and Parmesan.",
+        "Cover with foil and bake for 30 minutes. Remove foil and bake an additional 15 minutes until cheese is golden and bubbly.",
+        "Let stand 10 minutes before serving. Garnish with fresh basil."
+      ]
+    },
+    {
+      "name": "Paulie's Peppers and Eggs",
+      "description": "A simple Italian dish that Paulie Walnuts swears by. Bell peppers and scrambled eggs make a surprisingly satisfying meal that's perfect for breakfast, lunch, or dinner.",
+      "ingredients": [
+        "4 large bell peppers (red, green, or mixed)",
+        "6 large eggs",
+        "1/4 cup olive oil",
+        "2 cloves garlic, sliced",
+        "Salt and pepper to taste",
+        "Grated Pecorino Romano cheese",
+        "Italian bread for serving",
+        "Fresh parsley, chopped"
+      ],
+      "instructions": [
+        "Slice peppers into strips, removing seeds and membranes.",
+        "Heat olive oil in a large skillet over medium heat.",
+        "Add sliced garlic and cook until fragrant, about 1 minute.",
+        "Add pepper strips, season with salt and pepper, and cook until soft and slightly caramelized, about 15-20 minutes.",
+        "Beat eggs in a bowl with a pinch of salt.",
+        "Pour eggs over the peppers in the skillet.",
+        "Scramble the eggs with the peppers until cooked to your liking.",
+        "Sprinkle with Pecorino Romano and fresh parsley. Serve with crusty Italian bread."
+      ]
+    }
+  ]
+}

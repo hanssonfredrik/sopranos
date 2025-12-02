@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sopranos>
+  <series>
+    <title>The Sopranos</title>
+    <description>The Sopranos is an American crime drama television series created by David Chase. The series revolves around Tony Soprano, a New Jersey-based Italian-American mobster, portraying the difficulties that he faces as he tries to balance his family life with his role as leader of a criminal organization.</description>
+    <seasons>6</seasons>
+    <totalEpisodes>86</totalEpisodes>
+    <originalRun>1999-2007</originalRun>
+    <network>HBO</network>
+  </series>
+  
+  <seasons>
+    <!-- Season 1 -->
+    <season number="1" episodes="13" year="1999">
+      <episode number="1">
+        <title>The Sopranos</title>
+        <originalTitle>The Sopranos</originalTitle>
+        <writer>David Chase</writer>
+        <director>David Chase</director>
+        <airDate>January 10, 1999</airDate>
+        <mistress>None</mistress>
+        <description>
+          Tony Soprano is a New Jersey mob boss who starts seeing a psychiatrist after suffering a panic attack. He struggles to balance his family life with his criminal organization while dealing with his domineering mother and rebellious nephew. The pilot episode introduces us to Tony's world of violence, family dysfunction, and the stress of leading a crime family.
+        </description>
+        <music>
+          <track>Woke Up This Morning - Alabama 3</track>
+          <track>The Beast in Me - Johnny Cash</track>
+        </music>
+        <hboReview>
+          HBO's groundbreaking series premiere that redefined television drama. James Gandolfini's portrayal of Tony Soprano is nothing short of magnificent, creating a complex antihero that viewers simultaneously love and fear. The writing is sharp, the direction is cinematic, and the series sets a new standard for HBO's original programming.
+        </hboReview>
+        <godfatherReference>
+          Tony's therapy sessions mirror the confessional nature of classic mafia films, while his family dynamics echo the generational conflicts seen in The Godfather saga.
+        </godfatherReference>
+      </episode>
+
+      <episode number="2">
+        <title>46 Long</title>
+        <originalTitle>46 Long</originalTitle>
+        <writer>David Chase</writer>
+        <director>Dan Attias</director>
+        <airDate>January 17, 1999</airDate>
+        <mistress>None</mistress>
+        <description>
+          Tony deals with a truck hijacking gone wrong while Christopher and Brendan continue their reckless behavior. The episode explores the consequences of stepping outside the family's established operations. Meanwhile, Tony continues his therapy with Dr. Melfi, revealing more about his psychological struggles.
+        </description>
+        <music>
+          <track>Living on a Prayer - Bon Jovi</track>
+          <track>I'm Not Like Everybody Else - The Kinks</track>
+        </music>
+        <hboReview>
+          A strong follow-up that delves deeper into the criminal operations while maintaining the psychological depth established in the pilot. The series continues to balance dark humor with serious dramatic moments.
+        </hboReview>
+        <godfatherReference>
+          The truck hijacking scheme reflects similar criminal enterprises seen in mafia films, with emphasis on respect for hierarchy and consequences for independent action.
+        </godfatherReference>
+      </episode>
+
+      <episode number="3">
+        <title>Denial, Anger, Acceptance</title>
+        <originalTitle>Denial, Anger, Acceptance</originalTitle>
+        <writer>Mark Saraceni</writer>
+        <director>Nick Gomez</director>
+        <airDate>January 24, 1999</airDate>
+        <mistress>None</mistress>
+        <description>
+          Tony visits his old friend Jackie Aprile who is dying of cancer, forcing him to confront mortality and succession within the family. Meanwhile, Meadow's friend's father owes money to Tony, creating tension between Tony's criminal life and his daughter's social circle. The episode deals with themes of death, legacy, and the intersection of family and business.
+        </description>
+        <music>
+          <track>Complicated Shadows - Elvis Costello</track>
+          <track>Paparazzi Lightning - Geggy Tah</track>
+        </music>
+        <hboReview>
+          An emotionally complex episode that showcases the series' ability to handle weighty themes like mortality and loyalty. The writing explores the human cost of the criminal lifestyle.
+        </hboReview>
+        <godfatherReference>
+          Jackie's illness and the question of succession mirrors the power transitions and mortality themes central to The Godfather trilogy.
+        </godfatherReference>
+      </episode>
+
+      <episode number="4">
+        <title>Meadowlands</title>
+        <originalTitle>Meadowlands</originalTitle>
+        <writer>Jason Cahill</writer>
+        <director>John Patterson</director>
+        <airDate>January 31, 1999</airDate>
+        <mistress>None</mistress>
+        <description>
+          Christopher and Brendan's reckless actions escalate tensions with Junior Soprano. The FBI attempts to flip Brendan, while Tony tries to manage the growing conflict within his own family. The episode explores themes of loyalty, betrayal, and the deadly consequences of defying family hierarchy.
+        </description>
+        <music>
+          <track>Deep - Nine Inch Nails</track>
+          <track>White Rabbit - Jefferson Airplane</track>
+        </music>
+        <hboReview>
+          The tension builds magnificently in this episode, showcasing the series' ability to create suspense through character development rather than just violence.
+        </hboReview>
+        <godfatherReference>
+          The family power struggle and questions of loyalty echo the internal conflicts that drive classic mafia narratives.
+        </godfatherReference>
+      </episode>
+
+      <episode number="5">
+        <title>College</title>
+        <originalTitle>College</originalTitle>
+        <writer>James Manos Jr. &amp; David Chase</writer>
+        <director>Allen Coulter</director>
+        <airDate>February 7, 1999</airDate>
+        <mistress>None</mistress>
+        <description>
+          Tony takes Meadow on a college tour in Maine, but the trip becomes complicated when he spots Febby Petrulio, a former associate who entered witness protection. This episode is pivotal as it's the first time we see Tony commit murder on screen, while simultaneously showing his role as a caring father. The duality of his nature is perfectly captured.
+        </description>
+        <music>
+          <track>The Captain - Kasey Chambers</track>
+          <track>Tiny Tears - Tindersticks</track>
+        </music>
+        <hboReview>
+          Widely considered one of the series' finest episodes, "College" perfectly balances Tony's dual nature as both a loving father and a cold-blooded killer. The moral complexity is handled with exceptional skill.
+        </hboReview>
+        <godfatherReference>
+          The episode's exploration of maintaining family normalcy while conducting violent business reflects Michael Corleone's struggle to separate his two worlds.
+        </godfatherReference>
+      </episode>
+
+      <episode number="6">
+        <title>Pax Soprana</title>
+        <originalTitle>Pax Soprana</originalTitle>
+        <writer>Frank Renzulli</writer>
+        <director>Alan Taylor</director>
+        <airDate>February 14, 1999</airDate>
+        <mistress>None</mistress>
+        <description>
+          Junior becomes the official boss of the family, though Tony holds the real power behind the scenes. The arrangement creates new tensions as Junior begins asserting his authority. Meanwhile, Tony's therapy sessions with Dr. Melfi continue to reveal his psychological complexities, and his relationship with his mother becomes more strained.
+        </description>
+        <music>
+          <track>Smoke Gets in Your Eyes - The Platters</track>
+          <track>Con te Partirò - Andrea Bocelli</track>
+        </music>
+        <hboReview>
+          The political maneuvering within the crime family is expertly portrayed, showing how power structures work in both legitimate and illegitimate organizations.
+        </hboReview>
+        <godfatherReference>
+          The power arrangement between Tony and Junior reflects similar strategic family positioning seen throughout The Godfather films.
+        </godfatherReference>
+      </episode>
+
+      <episode number="7">
+        <title>Down Neck</title>
+        <originalTitle>Down Neck</originalTitle>
+        <writer>Mitchell Burgess &amp; Robin Green</writer>
+        <director>Lorraine Senna Ferrara</director>
+        <airDate>February 21, 1999</airDate>
+        <mistress>None</mistress>
+        <description>
+          When Anthony Jr. is caught with stolen wine at school, it triggers flashbacks to Tony's childhood and his first awareness of his father's criminal activities. The episode explores how criminal behavior is passed down through generations and examines Tony's relationship with his father Johnny Boy Soprano.
+        </description>
+        <music>
+          <track>Wheel in the Sky - Journey</track>
+          <track>Leader of the Pack - The Shangri-Las</track>
+        </music>
+        <hboReview>
+          A powerful exploration of generational trauma and the cyclical nature of criminal behavior. The flashback structure is used effectively to illuminate Tony's psychological development.
+        </hboReview>
+        <godfatherReference>
+          The father-son dynamic and the initiation into criminal life mirrors young Michael Corleone's gradual involvement in the family business.
+        </godfatherReference>
+      </episode>
+
+      <episode number="8">
+        <title>The Legend of Tennessee Moltisanti</title>
+        <originalTitle>The Legend of Tennessee Moltisanti</originalTitle>
+        <writer>Frank Renzulli &amp; David Chase</writer>
+        <director>Tim Van Patten</director>
+        <airDate>February 28, 1999</airDate>
+        <mistress>None</mistress>
+        <description>
+          Christopher becomes paranoid about FBI surveillance and begins writing a screenplay about his life in the mob. His ambitions as a writer clash with his criminal responsibilities. Meanwhile, the family prepares for potential indictments, and Tony deals with the practical aspects of running a criminal organization under federal scrutiny.
+        </description>
+        <music>
+          <track>Evidently Chickentown - John Cooper Clarke</track>
+          <track>Rubber Band - David Bowie</track>
+        </music>
+        <hboReview>
+          Christopher's Hollywood dreams provide both humor and pathos, while the FBI pressure adds realistic tension to the criminal operations.
+        </hboReview>
+        <godfatherReference>
+          Christopher's desire to document and glamorize mob life parallels how mafia stories have been romanticized in popular culture.
+        </godfatherReference>
+      </episode>
+
+      <episode number="9">
+        <title>Boca</title>
+        <originalTitle>Boca</originalTitle>
+        <writer>Jason Cahill &amp; Robin Green &amp; Mitchell Burgess</writer>
+        <director>Andy Wolk</director>
+        <airDate>March 7, 1999</airDate>
+        <mistress>None</mistress>
+        <description>
+          Tony discovers that his daughter Meadow's soccer coach has been having an inappropriate relationship with one of his students. The episode explores Tony's moral code and his protective instincts as a father, while also showing the limits of his influence in legitimate society. The contrast between his criminal world and normal parental concerns is highlighted.
+        </description>
+        <music>
+          <track>Sposa Son Disprezzata - Cecilia Bartoli</track>
+          <track>I Saved the World Today - Eurythmics</track>
+        </music>
+        <hboReview>
+          A morally complex episode that examines how Tony's criminal instincts intersect with his legitimate parental responsibilities.
+        </hboReview>
+        <godfatherReference>
+          Tony's protective father instincts reflect the family-first mentality that drives many mafia narratives.
+        </godfatherReference>
+      </episode>
+
+      <episode number="10">
+        <title>A Hit Is a Hit</title>
+        <originalTitle>A Hit Is a Hit</originalTitle>
+        <writer>Joe Bosso &amp; Frank Renzulli</writer>
+        <director>Matthew Penn</director>
+        <airDate>March 14, 1999</airDate>
+        <mistress>None</mistress>
+        <description>
+          Christopher becomes involved in the music industry through his connection with actress Amy Safir and her band. Tony and Carmela attend a dinner party with Carmela's wealthy friends, exposing class tensions and Tony's discomfort in legitimate high society. The episode examines authenticity and social climbing.
+        </description>
+        <music>
+          <track>Living on a Prayer - Bon Jovi</track>
+          <track>Look on Down From the Bridge - Mazzy Star</track>
+        </music>
+        <hboReview>
+          The music industry subplot provides insight into Christopher's character while the dinner party scenes brilliantly showcase class conflicts.
+        </hboReview>
+        <godfatherReference>
+          The tension between criminal wealth and legitimate society reflects themes of acceptance and legitimacy present in mafia films.
+        </godfatherReference>
+      </episode>
+
+      <episode number="11">
+        <title>Nobody Knows Anything</title>
+        <originalTitle>Nobody Knows Anything</originalTitle>
+        <writer>Frank Renzulli</writer>
+        <director>Henry J. Bronchtein</director>
+        <airDate>March 21, 1999</airDate>
+        <mistress>None</mistress>
+        <description>
+          Tony becomes suspicious that Big Pussy Bonpensiero might be cooperating with the FBI. The paranoia and mistrust within the organization reaches a fever pitch as Tony tries to determine who can be trusted. Meanwhile, Junior plans a hit on Tony, unaware that Livia has been feeding him information about Tony's therapy sessions.
+        </description>
+        <music>
+          <track>Frank Sinatra - I've Got the World on a String</track>
+          <track>Thru and Thru - The Rolling Stones</track>
+        </music>
+        <hboReview>
+          The suspense builds magnificently as paranoia consumes the characters. The acting and writing create genuine tension about loyalty and betrayal.
+        </hboReview>
+        <godfatherReference>
+          The themes of paranoia and betrayal within the family organization are central elements of classic mafia storytelling.
+        </godfatherReference>
+      </episode>
+
+      <episode number="12">
+        <title>Isabella</title>
+        <originalTitle>Isabella</originalTitle>
+        <writer>Robin Green &amp; Mitchell Burgess</writer>
+        <director>Allen Coulter</director>
+        <airDate>March 28, 1999</airDate>
+        <mistress>Isabella (hallucination)</mistress>
+        <description>
+          Tony suffers a mental breakdown after learning about his mother's betrayal and Junior's assassination plot. He hallucinates about Isabella, a beautiful Italian exchange student, while struggling with depression and lithium medication. The episode showcases Tony's psychological fragility and his complicated relationship with his mother.
+        </description>
+        <music>
+          <track>Tiny Tears - Tindersticks</track>
+          <track>Affection - Scritti Politti</track>
+        </music>
+        <hboReview>
+          A deeply psychological episode that showcases James Gandolfini's range as an actor. The hallucination sequences are handled with artistic sophistication.
+        </hboReview>
+        <godfatherReference>
+          The maternal betrayal echoes the complex family loyalties and betrayals that define classic mafia narratives.
+        </godfatherReference>
+      </episode>
+
+      <episode number="13">
+        <title>I Dream of Jeannie Cusamano</title>
+        <originalTitle>I Dream of Jeannie Cusamano</originalTitle>
+        <writer>David Chase</writer>
+        <director>John Patterson</director>
+        <airDate>April 4, 1999</airDate>
+        <mistress>None</mistress>
+        <description>
+          The season finale brings all storylines to a climax as Tony survives Junior's assassination attempt and must decide what to do about his mother and uncle. The episode deals with the consequences of family betrayal and Tony's realization that his own mother orchestrated the attempt on his life. The season ends with the family dynamics forever changed.
+        </description>
+        <music>
+          <track>I Saved the World Today - Eurythmics</track>
+          <track>Thru and Thru - The Rolling Stones</track>
+        </music>
+        <hboReview>
+          A masterful season finale that resolves major plot threads while setting up future conflicts. The emotional weight of maternal betrayal is handled with exceptional dramatic skill.
+        </hboReview>
+        <godfatherReference>
+          The family betrayal and its resolution reflect the complex moral choices that define great mafia storytelling, particularly the tension between blood family and crime family loyalty.
+        </godfatherReference>
+      </episode>
+    </season>
+
+    <!-- Season 2 -->
+    <season number="2" episodes="13" year="2000">
+      <episode number="1">
+        <title>Guy Walks into a Psychiatrist's Office...</title>
+        <originalTitle>Guy Walks into a Psychiatrist's Office...</originalTitle>
+        <writer>Jason Cahill</writer>
+        <director>Allen Coulter</director>
+        <airDate>January 16, 2000</airDate>
+        <mistress>None</mistress>
+        <description>
+          Season two opens with Tony trying to rebuild his relationship with his family after the events of season one. He's dealing with the aftermath of Junior's failed assassination attempt and his mother's betrayal. Meanwhile, new characters are introduced including Richie Aprile, who's just been released from prison and expects to reclaim his position in the family.
+        </description>
+        <music>
+          <track>Woke Up This Morning - Alabama 3</track>
+          <track>Complicated Shadows - Elvis Costello</track>
+        </music>
+        <hboReview>
+          A strong season opener that effectively establishes new conflicts while addressing the fallout from season one. The introduction of Richie Aprile immediately creates tension.
+        </hboReview>
+        <godfatherReference>
+          Richie's return from prison and expectation of respect mirrors the theme of old-world traditions clashing with modern criminal operations.
+        </godfatherReference>
+      </episode>
+
+      <episode number="2">
+        <title>Do Not Resuscitate</title>
+        <originalTitle>Do Not Resuscitate</originalTitle>
+        <writer>Robin Green, Mitchell Burgess, Frank Renzulli</writer>
+        <director>Martin Bruestle</director>
+        <airDate>January 23, 2000</airDate>
+        <mistress>None</mistress>
+        <description>
+          Tony visits his mother in the hospital while she recovers from her stroke, struggling with conflicted feelings about their relationship. Junior is under house arrest and dealing with his own health issues. The episode explores themes of aging, family obligation, and the cyclical nature of power in criminal organizations.
+        </description>
+        <music>
+          <track>Living on a Prayer - Bon Jovi</track>
+          <track>Deep - Nine Inch Nails</track>
+        </music>
+        <hboReview>
+          The hospital scenes between Tony and his mother are masterfully written, showcasing the complex emotions between them despite her betrayal.
+        </hboReview>
+        <godfatherReference>
+          The themes of family duty despite betrayal reflect the complex loyalties that define mafia family structures.
+        </godfatherReference>
+      </episode>
+    </season>
+
+    <!-- Season 3 -->
+    <season number="3" episodes="13" year="2001">
+      <episode number="1">
+        <title>Mr. Ruggerio's Neighborhood</title>
+        <originalTitle>Mr. Ruggerio's Neighborhood</originalTitle>
+        <writer>David Chase</writer>
+        <director>Allen Coulter</director>
+        <airDate>March 4, 2001</airDate>
+        <mistress>None</mistress>
+        <description>
+          The FBI plants a bug in the Soprano basement, and the episode is told largely from the perspective of the federal agents conducting surveillance. This unique narrative approach shows how the FBI views Tony and his organization, while also revealing the mundane aspects of both criminal life and law enforcement.
+        </description>
+        <music>
+          <track>Every Breath You Take - The Police</track>
+          <track>Evidently Chickentown - John Cooper Clarke</track>
+        </music>
+        <hboReview>
+          An innovative episode that provides a fresh perspective on familiar characters. The surveillance angle adds tension and paranoia to every scene.
+        </hboReview>
+        <godfatherReference>
+          The cat-and-mouse game between law enforcement and organized crime reflects classic themes of pursuit and evasion in mafia films.
+        </godfatherReference>
+      </episode>
+    </season>
+
+    <!-- Season 4 -->
+    <season number="4" episodes="13" year="2002">
+      <episode number="1">
+        <title>For All Debts Public and Private</title>
+        <originalTitle>For All Debts Public and Private</originalTitle>
+        <writer>David Chase</writer>
+        <director>Allen Coulter</director>
+        <airDate>September 15, 2002</airDate>
+        <mistress>None</mistress>
+        <description>
+          Tony tells Christopher the story of how he and Tony Blundetto killed Willie Overall, the man who killed Christopher's father. This revelation changes Christopher's understanding of his place in the family and his relationship with Tony. The episode deals with themes of revenge, loyalty, and the ways in which the past continues to influence the present.
+        </description>
+        <music>
+          <track>Born to Run - Bruce Springsteen</track>
+          <track>The Captain - Kasey Chambers</track>
+        </music>
+        <hboReview>
+          The revelation about Christopher's father adds depth to the Tony-Christopher relationship while exploring how violence perpetuates through generations.
+        </hboReview>
+        <godfatherReference>
+          The cycle of revenge and the importance of family honor reflect central themes in classic mafia storytelling.
+        </godfatherReference>
+      </episode>
+    </season>
+  </seasons>
+
+  <recipes>
+    <recipe name="Tony's Gabagool Sandwich">
+      <description>A classic Italian-American cold cut sandwich featuring capicola, provolone, and traditional fixings</description>
+      <ingredients>
+        <ingredient>Capicola (Gabagool) - sliced thin</ingredient>
+        <ingredient>Provolone cheese</ingredient>
+        <ingredient>Italian bread or sub roll</ingredient>
+        <ingredient>Lettuce</ingredient>
+        <ingredient>Tomato</ingredient>
+        <ingredient>Red onion</ingredient>
+        <ingredient>Olive oil</ingredient>
+        <ingredient>Red wine vinegar</ingredient>
+        <ingredient>Salt and pepper</ingredient>
+      </ingredients>
+      <instructions>
+        <step>Split the Italian bread lengthwise</step>
+        <step>Drizzle with olive oil and red wine vinegar</step>
+        <step>Layer the capicola and provolone cheese</step>
+        <step>Add lettuce, tomato, and red onion</step>
+        <step>Season with salt and pepper</step>
+        <step>Serve immediately</step>
+      </instructions>
+    </recipe>
+
+    <recipe name="Carmela's Ziti">
+      <description>A hearty baked pasta dish that appears frequently in the Soprano household</description>
+      <ingredients>
+        <ingredient>1 lb ziti pasta</ingredient>
+        <ingredient>2 cups ricotta cheese</ingredient>
+        <ingredient>2 cups mozzarella cheese, shredded</ingredient>
+        <ingredient>1 cup Parmesan cheese, grated</ingredient>
+        <ingredient>4 cups marinara sauce</ingredient>
+        <ingredient>1 lb ground beef or Italian sausage</ingredient>
+        <ingredient>2 cloves garlic, minced</ingredient>
+        <ingredient>1 onion, diced</ingredient>
+        <ingredient>Fresh basil</ingredient>
+        <ingredient>Salt and pepper</ingredient>
+      </ingredients>
+      <instructions>
+        <step>Cook ziti according to package directions</step>
+        <step>Brown the meat with onion and garlic</step>
+        <step>Add marinara sauce and simmer</step>
+        <step>Mix pasta with ricotta and half the mozzarella</step>
+        <step>Layer pasta mixture and meat sauce in baking dish</step>
+        <step>Top with remaining mozzarella and Parmesan</step>
+        <step>Bake at 375°F for 30 minutes until bubbly</step>
+      </instructions>
+    </recipe>
+
+    <recipe name="Paulie's Peppers and Eggs">
+      <description>A simple Italian-American dish that Paulie Walnuts frequently mentions</description>
+      <ingredients>
+        <ingredient>6 large eggs</ingredient>
+        <ingredient>3 bell peppers (red, yellow, green)</ingredient>
+        <ingredient>1 large onion</ingredient>
+        <ingredient>3 cloves garlic</ingredient>
+        <ingredient>Olive oil</ingredient>
+        <ingredient>Salt and pepper</ingredient>
+        <ingredient>Fresh parsley</ingredient>
+        <ingredient>Italian bread for serving</ingredient>
+      </ingredients>
+      <instructions>
+        <step>Slice peppers and onions into strips</step>
+        <step>Heat olive oil in large skillet</step>
+        <step>Sauté peppers and onions until soft</step>
+        <step>Add garlic and cook 1 minute</step>
+        <step>Beat eggs and scramble into pepper mixture</step>
+        <step>Season with salt, pepper, and parsley</step>
+        <step>Serve with crusty Italian bread</step>
+      </instructions>
+    </recipe>
+  </recipes>
+
+  <topList>
+    <category name="Best Episodes">
+      <item rank="1">
+        <title>Pine Barrens (Season 3, Episode 11)</title>
+        <description>Christopher and Paulie get lost in the Pine Barrens while trying to collect money from a Russian. This episode is famous for its dark humor and survival elements.</description>
+      </item>
+      <item rank="2">
+        <title>College (Season 1, Episode 5)</title>
+        <description>Tony takes Meadow on a college tour but encounters a former associate in witness protection. The duality of Tony as father and killer is perfectly captured.</description>
+      </item>
+      <item rank="3">
+        <title>Long Term Parking (Season 5, Episode 12)</title>
+        <description>The shocking death of Adriana La Cerva in one of the series' most emotionally devastating episodes.</description>
+      </item>
+      <item rank="4">
+        <title>Made in America (Season 6, Episode 21)</title>
+        <description>The controversial series finale that left viewers debating Tony's fate with its ambiguous ending at Holsten's diner.</description>
+      </item>
+      <item rank="5">
+        <title>Whoever Did This (Season 4, Episode 9)</title>
+        <description>Tony discovers Ralph's involvement in the fire that killed Pie-O-My, leading to a brutal confrontation.</description>
+      </item>
+    </category>
+
+    <category name="Most Memorable Characters">
+      <item rank="1">
+        <title>Tony Soprano</title>
+        <description>The complex mob boss struggling with family, business, and mental health. James Gandolfini's iconic performance defined the antihero of prestige television.</description>
+      </item>
+      <item rank="2">
+        <title>Paulie 'Walnuts' Gualtieri</title>
+        <description>The superstitious and unpredictable soldier known for his loyalty to Tony and his memorable one-liners.</description>
+      </item>
+      <item rank="3">
+        <title>Christopher Moltisanti</title>
+        <description>Tony's nephew and protégé whose Hollywood dreams conflict with his criminal responsibilities.</description>
+      </item>
+      <item rank="4">
+        <title>Dr. Jennifer Melfi</title>
+        <description>Tony's psychiatrist who provides insight into his psychological complexities while struggling with the ethical implications of treating a criminal.</description>
+      </item>
+      <item rank="5">
+        <title>Silvio Dante</title>
+        <description>Tony's consigliere and loyal friend, known for his calm demeanor and Michael Corleone impressions.</description>
+      </item>
+    </category>
+
+    <category name="Most Quoted Lines">
+      <item rank="1">
+        <title>"Forget about it!"</title>
+        <description>The classic dismissive phrase used throughout the series to end discussions or minimize problems.</description>
+      </item>
+      <item rank="2">
+        <title>"Gabagool? Ova here!"</title>
+        <description>The Italian-American pronunciation of capicola, often referenced when ordering cold cuts.</description>
+      </item>
+      <item rank="3">
+        <title>"It's good to be in something from the ground floor."</title>
+        <description>Tony's philosophy about getting involved in opportunities early, from the pilot episode.</description>
+      </item>
+      <item rank="4">
+        <title>"Those who want respect, give respect."</title>
+        <description>Tony's code about earning respect through reciprocity and proper behavior.</description>
+      </item>
+      <item rank="5">
+        <title>"I wipe my ass with your feelings."</title>
+        <description>One of Tony's more colorful expressions of dismissal and dominance.</description>
+      </item>
+    </category>
+  </topList>
+
+  <awards>
+    <award>
+      <name>Emmy Awards</name>
+      <wins>21</wins>
+      <nominations>111</nominations>
+    </award>
+    <award>
+      <name>Golden Globe Awards</name>
+      <wins>5</wins>
+      <nominations>12</nominations>
+    </award>
+    <award>
+      <name>Screen Actors Guild Awards</name>
+      <wins>3</wins>
+      <nominations>16</nominations>
+    </award>
+    <award>
+      <name>Peabody Award</name>
+      <wins>1</wins>
+      <nominations>1</nominations>
+    </award>
+  </awards>
+</sopranos>
