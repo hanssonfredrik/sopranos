@@ -75,32 +75,38 @@ async function fetchSeasons(): Promise<Season[]> {
               ? new Date(seasonData.episodes[0].airDate).getFullYear() 
               : 1999),
         description: `Season ${seasonData.seasonNumber || 1} of The Sopranos`,
-        episodes: (seasonData.episodes || []).map((ep) => ({
-          episodeNumber: ep.episodeNumber || ep.episodeInSeason || 1,
-          title: ep.title || 'Untitled',
-          airDate: ep.airDate || '',
-          summary: ep.description || '',
-          swedishDescription: ep.swedishDescription,
-          director: ep.director || 'Unknown',
-          writer: ep.author || 'Unknown',
-          runtime: 60,
-          music: ep.music && typeof ep.music === 'string'
-            ? ep.music
-                .split('\n')
-                .filter((m) => m.trim())
-                .map((m) => {
-                  const parts = m.replace(/^\d+\.\s*/, '').split(' - ');
-                  return {
-                    title: parts[0]?.trim() || m.trim(),
-                    artist: parts[1]?.trim() || 'Unknown'
-                  };
-                })
-            : [],
-          quotes: [],
-          hboReview: ep.hboReview,
-          imdbLink: ep.imdbLink,
-          imdbRating: ep.imdbRating
-        }))
+        episodes: (seasonData.episodes || []).map((ep) => {
+          const episode: any = {
+            episodeNumber: ep.episodeNumber || ep.episodeInSeason || 1,
+            title: ep.title || 'Untitled',
+            airDate: ep.airDate || '',
+            summary: ep.description || '',
+            director: ep.director || 'Unknown',
+            writer: ep.author || 'Unknown',
+            runtime: 60,
+            music: ep.music && typeof ep.music === 'string'
+              ? ep.music
+                  .split('\n')
+                  .filter((m) => m.trim())
+                  .map((m) => {
+                    const parts = m.replace(/^\d+\.\s*/, '').split(' - ');
+                    return {
+                      title: parts[0]?.trim() || m.trim(),
+                      artist: parts[1]?.trim() || 'Unknown'
+                    };
+                  })
+              : [],
+            quotes: []
+          };
+          
+          // Only add optional properties if they have values
+          if (ep.swedishDescription) episode.swedishDescription = ep.swedishDescription;
+          if (ep.hboReview) episode.hboReview = ep.hboReview;
+          if (ep.imdbLink) episode.imdbLink = ep.imdbLink;
+          if (ep.imdbRating !== undefined) episode.imdbRating = ep.imdbRating;
+          
+          return episode;
+        })
       }));
 
       cachedSeasons = seasons;
