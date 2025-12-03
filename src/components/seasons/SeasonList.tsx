@@ -29,21 +29,25 @@ export function SeasonList({ seasons, activeSeason }: SeasonListProps) {
             <NavLink
               to={`/seasons/${season.seasonNumber}`}
               className={({ isActive }) =>
-                `block px-3 py-2 rounded-md transition-colors ${
+                `block px-3 py-3 rounded-md transition-colors ${
                   isActive || season.seasonNumber === activeSeason
-                    ? 'bg-primary text-white font-semibold'
+                    ? 'bg-primary font-semibold'
                     : 'text-secondary hover:bg-secondary-light hover:text-primary'
                 }`
               }
+              style={({ isActive }) => 
+                isActive || season.seasonNumber === activeSeason
+                  ? { color: 'white' }
+                  : undefined
+              }
             >
-              <div className="flex items-center justify-between">
+              <div className="mb-1">
                 <span>Season {season.seasonNumber}</span>
-                <span className="text-xs opacity-75">
-                  {season.episodeCount} eps
-                </span>
               </div>
-              <div className="text-xs opacity-75 mt-1">
-                {season.year}
+              <div className="flex items-center justify-center gap-2 text-xs">
+                <span>{season.year}</span>
+                <span>•</span>
+                <span>{season.episodeCount} eps</span>
               </div>
             </NavLink>
           </li>

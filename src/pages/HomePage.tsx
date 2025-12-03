@@ -87,9 +87,9 @@ export function HomePage() {
 
       {/* Series Stats */}
       <section className="bg-surface rounded-lg shadow-md p-8">
-        <h2 className="text-2xl font-semibold text-primary mb-6 text-center">
+        {/* <h2 className="text-2xl font-semibold text-primary mb-6 text-center">
           Series Information
-        </h2>
+        </h2> */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div>
             <div className="text-3xl font-bold text-primary mb-2">6</div>
