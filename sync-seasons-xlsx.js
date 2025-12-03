@@ -120,7 +120,6 @@ function parseXlsxToJson() {
         director: (colIndices.director >= 0 ? row[colIndices.director] : '') || '',
         airDate: (colIndices.airDate >= 0 ? row[colIndices.airDate] : '') || '',
         mistress: (colIndices.mistress >= 0 ? row[colIndices.mistress] : '') || '',
-        description: hboReview || 'English translation pending', // Use HBO review as English description
         swedishDescription: swedishDesc, // Keep original Swedish description
         godfather: (colIndices.godfather >= 0 ? row[colIndices.godfather] : '') || '',
         music: (colIndices.music >= 0 ? row[colIndices.music] : '') || '',
@@ -152,14 +151,10 @@ function parseXlsxToJson() {
 function main() {
   const seasonsData = parseXlsxToJson();
 
-  const outputFile = 'c:/Projects/Venueve/sopranos/src/data/seasons.json';
-  const publicOutputFile = 'c:/Projects/Venueve/sopranos/public/data/seasons.json';
+  const outputFile = 'c:/Projects/Venueve/sopranos/public/data/seasons.json';
   
   console.log(`\nWriting to ${outputFile}...`);
   fs.writeFileSync(outputFile, JSON.stringify(seasonsData, null, 2), 'utf-8');
-  
-  console.log(`Writing to ${publicOutputFile}...`);
-  fs.writeFileSync(publicOutputFile, JSON.stringify(seasonsData, null, 2), 'utf-8');
 
   console.log('Done!');
 }
