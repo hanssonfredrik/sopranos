@@ -92,7 +92,7 @@ export function EpisodeDetail({ episode, seasonNumber }: EpisodeDetailProps) {
       <div className="bg-surface rounded-lg shadow-md p-6 mb-6">
         <h2 className="text-xl font-semibold text-primary mb-4">Synopsis</h2>
         <p className="text-secondary leading-relaxed whitespace-pre-wrap">
-          {episode.summary}
+          {episode.swedishDescription || episode.summary}
         </p>
       </div>
 
