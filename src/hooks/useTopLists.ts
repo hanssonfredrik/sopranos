@@ -60,7 +60,7 @@ async function fetchTopLists(): Promise<TopList[]> {
 
   cachePromise = (async () => {
     try {
-      const response = await fetch('/src/data/toplist.json');
+      const response = await fetch('/data/toplist.json');
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

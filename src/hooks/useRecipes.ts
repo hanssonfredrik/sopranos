@@ -39,7 +39,7 @@ async function fetchRecipes(): Promise<Recipe[]> {
   }
 
   // Start new fetch
-  cachePromise = fetch('/src/data/recipes.json')
+  cachePromise = fetch('/data/recipes.json')
     .then(async (response) => {
       if (!response.ok) {
         throw new Error(`Failed to fetch recipes: ${response.status} ${response.statusText}`);

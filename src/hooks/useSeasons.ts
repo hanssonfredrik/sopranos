@@ -51,7 +51,7 @@ async function fetchSeasons(): Promise<Season[]> {
   }
 
   // Start new fetch
-  cachePromise = fetch('/src/data/seasons.json')
+  cachePromise = fetch('/data/seasons.json')
     .then(async (response) => {
       if (!response.ok) {
         throw new Error(`Failed to fetch seasons: ${response.status} ${response.statusText}`);
