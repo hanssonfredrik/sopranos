@@ -109,6 +109,9 @@ function parseXlsxToJson() {
         continue;
       }
 
+      const swedishDesc = (colIndices.description >= 0 ? row[colIndices.description] : '') || '';
+      const hboReview = (colIndices.hboReview >= 0 ? row[colIndices.hboReview] : '') || '';
+      
       const episode = {
         episodeNumber: globalEpisodeNumber++,
         episodeInSeason: colIndices.episode >= 0 ? (parseInt(row[colIndices.episode]) || (episodes.length + 1)) : (episodes.length + 1),
@@ -117,10 +120,11 @@ function parseXlsxToJson() {
         director: (colIndices.director >= 0 ? row[colIndices.director] : '') || '',
         airDate: (colIndices.airDate >= 0 ? row[colIndices.airDate] : '') || '',
         mistress: (colIndices.mistress >= 0 ? row[colIndices.mistress] : '') || '',
-        description: (colIndices.description >= 0 ? row[colIndices.description] : '') || '',
+        description: hboReview || 'English translation pending', // Use HBO review as English description
+        swedishDescription: swedishDesc, // Keep original Swedish description
         godfather: (colIndices.godfather >= 0 ? row[colIndices.godfather] : '') || '',
         music: (colIndices.music >= 0 ? row[colIndices.music] : '') || '',
-        hboReview: (colIndices.hboReview >= 0 ? row[colIndices.hboReview] : '') || '',
+        hboReview: hboReview,
         imdbLink: getImdbLink(seasonNumber, episodes.length + 1),
         imdbRating: getImdbRating(seasonNumber, episodes.length + 1)
       };

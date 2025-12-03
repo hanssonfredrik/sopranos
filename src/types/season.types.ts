@@ -24,8 +24,10 @@ export interface Episode {
   title: string;
   /** Air date in ISO 8601 format (YYYY-MM-DD) */
   airDate: string;
-  /** Episode summary/description */
+  /** Episode summary/description in English */
   summary: string;
+  /** Original Swedish description */
+  swedishDescription?: string;
   /** Director name */
   director: string;
   /** Writer name(s) */

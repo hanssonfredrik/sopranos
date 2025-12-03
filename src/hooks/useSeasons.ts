@@ -27,6 +27,7 @@ interface RawSeasonData {
     airDate?: string;
     mistress?: string;
     description?: string;
+    swedishDescription?: string;
     godfather?: string;
     music?: string;
     hboReview?: string;
@@ -79,6 +80,7 @@ async function fetchSeasons(): Promise<Season[]> {
           title: ep.title || 'Untitled',
           airDate: ep.airDate || '',
           summary: ep.description || '',
+          swedishDescription: ep.swedishDescription,
           director: ep.director || 'Unknown',
           writer: ep.author || 'Unknown',
           runtime: 60,
@@ -95,9 +97,9 @@ async function fetchSeasons(): Promise<Season[]> {
                 })
             : [],
           quotes: [],
-          hboReview: ep.hboReview || '',
-          imdbLink: ep.imdbLink || '',
-          imdbRating: ep.imdbRating || undefined
+          hboReview: ep.hboReview,
+          imdbLink: ep.imdbLink,
+          imdbRating: ep.imdbRating
         }))
       }));
 
