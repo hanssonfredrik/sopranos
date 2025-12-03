@@ -1,0 +1,9 @@
+/* Responsive utilities for mobile navigation */
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex !important;
+  }
+  .md\:hidden {
+    display: none !important;
+  }
+}
