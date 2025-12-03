@@ -3,8 +3,8 @@
  * Main application routing with lazy loading and error handling
  */
 
-import { lazy, Suspense } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { lazy, Suspense, useEffect } from 'react';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { MainLayout } from '@/components/layout/MainLayout';
 import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
 import { HomePage } from '@/pages/HomePage';
@@ -18,11 +18,30 @@ const RecipesPage = lazy(() => import('@/pages/RecipesPage').then(m => ({ defaul
 const TopListPage = lazy(() => import('@/pages/TopListPage').then(m => ({ default: m.TopListPage })));
 
 /**
+ * Analytics tracker component for Google Analytics
+ */
+function AnalyticsTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Track page views on route change
+    if (typeof window.gtag !== 'undefined') {
+      window.gtag('event', 'page_view', {
+        page_path: location.pathname + location.search + location.hash
+      });
+    }
+  }, [location]);
+
+  return null;
+}
+
+/**
  * Main application router with lazy loading and 404 handling
  */
 export function AppRouter() {
   return (
     <Router>
+      <AnalyticsTracker />
       <Routes>
         <Route element={<MainLayout />}>
           {/* Home - no lazy loading for immediate display */}

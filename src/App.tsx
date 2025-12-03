@@ -3,8 +3,14 @@
  */
 
 import { AppRouter } from '@/components/AppRouter';
+import { CookieConsent } from '@/components/CookieConsent';
 import './App.css';
 
 export default function App() {
-  return <AppRouter />;
+  return (
+    <>
+      <AppRouter />
+      <CookieConsent />
+    </>
+  );
 }
