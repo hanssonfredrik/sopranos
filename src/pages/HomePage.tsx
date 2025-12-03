@@ -24,13 +24,13 @@ export function HomePage() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
             to="/seasons"
-            className="btn-primary px-8 py-3 rounded-lg font-semibold transition-colors"
+            className="btn-primary px-8 py-3 rounded-lg font-semibold transition-colors hover:text-white"
           >
             Browse Seasons
           </Link>
           <Link
             to="/toplist"
-            className="px-8 py-3 rounded-lg font-semibold border border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+            className="px-8 py-3 rounded-lg font-semibold border border-primary text-primary hover:bg-primary hover:!text-white transition-colors"
           >
             Top Episodes
           </Link>

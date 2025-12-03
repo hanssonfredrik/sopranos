@@ -73,7 +73,7 @@ export function RecipeDetail({ recipe }: RecipeDetailProps) {
               <span className="text-accent font-semibold min-w-[32px] text-lg">
                 {index + 1}.
               </span>
-              <p className="text-secondary leading-relaxed pt-0.5">
+              <p className="text-secondary leading-relaxed pt-0.5 text-left">
                 {instruction}
               </p>
             </li>

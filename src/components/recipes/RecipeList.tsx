@@ -34,15 +34,23 @@ export function RecipeList({ recipes, activeRecipe }: RecipeListProps) {
               <NavLink
                 to={`/recipes/${slug}`}
                 className={({ isActive: routeActive }) =>
-                  `block px-3 py-2 rounded-md transition-colors ${
+                  `block px-3 py-3 rounded-md transition-colors ${
                     routeActive || isActive
-                      ? 'bg-primary text-white font-semibold'
+                      ? 'bg-primary font-semibold'
                       : 'text-secondary hover:bg-secondary-light hover:text-primary'
                   }`
                 }
+                style={({ isActive: routeActive }) => 
+                  routeActive || isActive
+                    ? { color: 'white' }
+                    : undefined
+                }
               >
-                <div className="text-sm">
-                  {recipe.name}
+                <div className="mb-1">
+                  <span>{recipe.name}</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-xs">
+                  <span>Italian Recipe</span>
                 </div>
               </NavLink>
             </li>

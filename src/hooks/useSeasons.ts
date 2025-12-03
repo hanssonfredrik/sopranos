@@ -15,19 +15,23 @@ let cachePromise: Promise<Season[]> | null = null;
  * Raw JSON structure from seasons.json
  */
 interface RawSeasonData {
-  season?: number;
+  seasonNumber?: number;
+  year?: string;
+  episodeCount?: number;
   episodes?: Array<{
     episodeNumber?: number;
     episodeInSeason?: number;
     title?: string;
-    airDate?: string;
-    description?: string;
-    director?: string;
     author?: string;
-    writer?: string;
-    runtime?: number;
+    director?: string;
+    airDate?: string;
+    mistress?: string;
+    description?: string;
+    godfather?: string;
     music?: string;
-    quotes?: string[];
+    hboReview?: string;
+    imdbLink?: string;
+    imdbRating?: number;
   }>;
 }
 
@@ -62,20 +66,22 @@ async function fetchSeasons(): Promise<Season[]> {
       // Transform raw JSON data to match our Season type
       const rawSeasons = data as RawSeasonData[];
       const seasons: Season[] = rawSeasons.map((seasonData) => ({
-        seasonNumber: seasonData.season || 1,
-        episodeCount: seasonData.episodes?.length || 0,
-        year: seasonData.episodes?.[0]?.airDate 
-          ? new Date(seasonData.episodes[0].airDate).getFullYear() 
-          : 1999,
-        description: `Season ${seasonData.season || 1} of The Sopranos`,
+        seasonNumber: seasonData.seasonNumber || 1,
+        episodeCount: seasonData.episodeCount || seasonData.episodes?.length || 0,
+        year: seasonData.year 
+          ? (typeof seasonData.year === 'string' ? parseInt(seasonData.year) : seasonData.year)
+          : (seasonData.episodes?.[0]?.airDate 
+              ? new Date(seasonData.episodes[0].airDate).getFullYear() 
+              : 1999),
+        description: `Season ${seasonData.seasonNumber || 1} of The Sopranos`,
         episodes: (seasonData.episodes || []).map((ep) => ({
           episodeNumber: ep.episodeNumber || ep.episodeInSeason || 1,
           title: ep.title || 'Untitled',
           airDate: ep.airDate || '',
           summary: ep.description || '',
           director: ep.director || 'Unknown',
-          writer: ep.author || ep.writer || 'Unknown',
-          runtime: ep.runtime || 60,
+          writer: ep.author || 'Unknown',
+          runtime: 60,
           music: ep.music && typeof ep.music === 'string'
             ? ep.music
                 .split('\n')
@@ -88,7 +94,10 @@ async function fetchSeasons(): Promise<Season[]> {
                   };
                 })
             : [],
-          quotes: ep.quotes || []
+          quotes: [],
+          hboReview: ep.hboReview || '',
+          imdbLink: ep.imdbLink || '',
+          imdbRating: ep.imdbRating || undefined
         }))
       }));
 

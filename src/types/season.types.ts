@@ -36,6 +36,12 @@ export interface Episode {
   music: MusicTrack[];
   /** Notable quotes from the episode */
   quotes: string[];
+  /** HBO review/commentary */
+  hboReview?: string;
+  /** IMDB episode link */
+  imdbLink?: string;
+  /** IMDB rating (0-10) */
+  imdbRating?: number;
 }
 
 /**

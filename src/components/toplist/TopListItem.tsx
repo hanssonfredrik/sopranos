@@ -13,25 +13,9 @@ interface TopListItemProps {
 }
 
 /**
- * Displays a ranked item with medal emoji for top 3
+ * Displays a ranked item with numbered badge
  */
 export function TopListItem({ item, isTopRank = false }: TopListItemProps) {
-  // Medal emojis for top 3 ranks
-  const getMedalEmoji = (rank: number): string => {
-    switch (rank) {
-      case 1:
-        return '🥇';
-      case 2:
-        return '🥈';
-      case 3:
-        return '🥉';
-      default:
-        return '';
-    }
-  };
-
-  const medal = getMedalEmoji(item.rank);
-
   return (
     <div
       className={`
@@ -41,15 +25,8 @@ export function TopListItem({ item, isTopRank = false }: TopListItemProps) {
     >
       <div className="flex items-start gap-4">
         {/* Rank badge */}
-        <div
-          className={`
-            flex-shrink-0 flex items-center justify-center
-            ${medal ? 'w-12 h-12 text-3xl' : 'w-10 h-10 bg-primary text-white rounded-full'}
-          `}
-        >
-          {medal || (
-            <span className="text-lg font-bold">{item.rank}</span>
-          )}
+        <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white">
+          <span className="text-lg font-bold">{item.rank}</span>
         </div>
 
         {/* Content */}

@@ -35,7 +35,7 @@ export function EpisodeDetail({ episode, seasonNumber }: EpisodeDetailProps) {
       {/* Episode Header */}
       <div className="bg-surface rounded-lg shadow-md p-6 mb-6">
         <div className="flex items-start justify-between mb-4">
-          <div>
+          <div className="flex-1">
             <div className="flex items-center gap-3 mb-2">
               <span className="px-3 py-1 bg-primary text-white text-sm font-semibold rounded">
                 S{seasonNumber}E{episode.episodeNumber}
@@ -48,6 +48,11 @@ export function EpisodeDetail({ episode, seasonNumber }: EpisodeDetailProps) {
               {episode.title}
             </h1>
           </div>
+          {episode.imdbRating && episode.imdbRating > 0 && (
+            <span className="px-2 py-1 bg-yellow-500 text-black text-sm font-semibold rounded flex items-center gap-1">
+              ⭐ {episode.imdbRating.toFixed(1)}
+            </span>
+          )}
         </div>
 
         <div className="grid grid-cols-2 gap-4 text-sm">
@@ -67,6 +72,19 @@ export function EpisodeDetail({ episode, seasonNumber }: EpisodeDetailProps) {
             <span className="font-semibold text-primary">Runtime:</span>{' '}
             <span className="text-secondary">{formatDuration(episode.runtime)}</span>
           </div>
+          {episode.imdbLink && (
+            <div className="col-span-2">
+              <span className="font-semibold text-primary">IMDB:</span>{' '}
+              <a 
+                href={episode.imdbLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-accent hover:underline"
+              >
+                View on IMDB →
+              </a>
+            </div>
+          )}
         </div>
       </div>
 
@@ -77,6 +95,16 @@ export function EpisodeDetail({ episode, seasonNumber }: EpisodeDetailProps) {
           {episode.summary}
         </p>
       </div>
+
+      {/* HBO Review */}
+      {episode.hboReview && (
+        <div className="bg-surface rounded-lg shadow-md p-6 mb-6">
+          <h2 className="text-xl font-semibold text-primary mb-4">HBO Review</h2>
+          <p className="text-secondary leading-relaxed whitespace-pre-wrap">
+            {episode.hboReview}
+          </p>
+        </div>
+      )}
 
       {/* Music Tracks */}
       {episode.music.length > 0 && (
@@ -90,7 +118,7 @@ export function EpisodeDetail({ episode, seasonNumber }: EpisodeDetailProps) {
                 <span className="text-accent font-semibold min-w-[24px]">
                   {index + 1}.
                 </span>
-                <div>
+                <div className="text-left">
                   <div className="font-medium text-primary">{track.title}</div>
                   <div className="text-sm text-secondary">{track.artist}</div>
                   {track.scene && (
