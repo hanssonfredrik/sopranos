@@ -27,7 +27,9 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-primary">The Sopranos</h1>
+            <NavLink to="/" className="text-xl font-bold text-primary hover:opacity-80 transition-opacity">
+              The Sopranos
+            </NavLink>
           </div>
 
           {/* Desktop Navigation Links */}
@@ -86,8 +88,8 @@ export function Navigation() {
                     className={({ isActive }) =>
                       `block px-4 py-2 text-sm font-medium transition-colors rounded ${
                         isActive
-                          ? 'text-primary bg-hover'
-                          : 'text-secondary hover:text-primary hover:bg-hover'
+                          ? 'text-white bg-hover'
+                          : 'text-secondary hover:text-white hover:bg-hover'
                       }`
                     }
                     onClick={() => setIsMobileMenuOpen(false)}

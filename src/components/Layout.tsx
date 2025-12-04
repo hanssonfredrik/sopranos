@@ -88,7 +88,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                     to={item.path}
                     className={`block px-3 py-2 rounded text-sm font-medium transition-colors ${
                       isActiveLink(item.path)
-                        ? 'text-accent-primary bg-tertiary'
+                        ? '!text-white bg-tertiary'
                         : 'text-secondary hover:text-primary hover:bg-hover'
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
